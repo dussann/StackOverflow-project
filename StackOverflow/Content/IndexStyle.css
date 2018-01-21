@@ -1,0 +1,38 @@
+﻿.imgBackground {
+    background-image: url("/Images/image1.jpg");
+    padding-bottom:25%;
+}
+
+.errorClass {
+    background-image: url("/Images/404img.jpg");
+    padding-bottom: 50%;
+}
+.errorClass>div{
+    color:red;
+}
+
+.problemClass{
+    color:red;
+}
+
+.commentsArea{        
+    margin-bottom: 15px;    
+}
+
+.detailsHeader{
+    background-color:burlywood;
+}
+
+.detailsTablePosition{
+    margin-left: 204px;
+    width: 935px;
+}
+
+.detailsTablePosition tr:first-child{
+    background-color: lightgray;
+}
+
+.inputPosition{
+    margin-top: 15px;
+    margin-bottom:15px;
+}

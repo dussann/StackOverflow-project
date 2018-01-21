@@ -1,0 +1,51 @@
+﻿@model IEnumerable<Model.Models.Blog>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<div class="imgBackground secondHeader" >
+    <h2 id="Register">Developers problems</h2>
+</div>
+
+
+
+
+<table class="table tableBackground">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.Titile)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Content)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Author)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Date)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.Titile)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Content)
+        </td>
+        <td>
+            <a href="@Url.Action("Details","Author",new { id = item.Author.Id })">@Html.DisplayFor(modelItem => item.Author.Name)</a>
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Date)
+        </td>
+        <td>
+            @Html.ActionLink("Details", "Details",new { id=item.Id.ToString() })                       
+        </td>        
+    </tr>
+}
+
+</table>
